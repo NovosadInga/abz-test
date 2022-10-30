@@ -1,0 +1,29 @@
+.user
+	width: 370px
+	background: $color-white
+	border-radius: $border-radius-md
+	padding: $spacing-sm
+	text-align: center
+	display: flex
+	flex-direction: column
+	+r($media-lg)
+		width: 282px
+	+r($media-md)
+		width: 344px
+	+r($media-sm)
+		width: 100%
+	&__ava
+		width: 70px
+		height: 70px
+		margin: 0 auto $spacing-sm
+		border-radius: 50%
+		overflow: hidden
+		img
+			object-fit: cover
+			object-position: center
+	&__name
+		margin-bottom: $spacing-sm
+	&__email a,
+	&__phone a
+		color: $color-black
+		text-decoration: none

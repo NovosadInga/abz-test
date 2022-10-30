@@ -1,0 +1,19 @@
+.form
+	width: 380px
+	margin: 0 auto
+	+r($media-sm)
+		width: 100%
+	&__item
+		margin-bottom: $spacing-lg
+		position: relative
+		&.is_error
+			.input-bl__element,
+			.file-bl-element
+				border: 2px solid $color-red
+			.file-bl__label
+				outline: 2px solid $color-red
+	.loader
+		top: 0
+		background: rgba(248, 248, 248, 0.8)
+		z-index: 2
+

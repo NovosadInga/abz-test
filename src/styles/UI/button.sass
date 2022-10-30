@@ -1,0 +1,23 @@
+a.button
+	display: inline-flex
+	justify-content: center
+	align-items: center
+.button
+	min-width: 100px
+	padding: 4px 18px
+	min-height: 34px
+	border-radius: 99em
+	background: $color-yellow
+	font-size: $font-size-md
+	font-family: $font-family-main
+	text-decoration: none
+	color: $color-black
+	border: none
+	cursor: pointer
+	&:hover,
+	&:active
+		background: $color-dark-yellow
+	&:disabled
+		background: $color-dark-grey
+		color: $color-white
+		cursor: default

@@ -1,0 +1,22 @@
+.loader
+	display: flex
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	height: auto
+
+	align-items: center
+	justify-content: center
+	&-wrap
+		position: relative
+		min-height: 100px
+		background: $color-light-grey
+	&-img
+		animation: rotateLoader 1s infinite linear
+
+@keyframes rotateLoader
+	0%
+		transform: rotate(0)
+	100%
+		transform: rotate(360deg)

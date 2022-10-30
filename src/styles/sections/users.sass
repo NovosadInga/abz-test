@@ -1,0 +1,24 @@
+.users
+	padding: $spacing-xl 0
+	text-align: center
+	&__title
+		margin-bottom: $spacing-lg
+	&-wrap
+		+r($media-lg)
+			padding: 0 45px
+		+r($media-md)
+			padding: 0 17px
+		+r($media-sm)
+			padding: 0
+	&-list
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-bottom: $spacing-sm
+		min-height: 300px
+		.loader
+			min-height: 300px
+		&.error-block-wrap
+			justify-content: center
+	&__item
+		margin-bottom: $spacing-md

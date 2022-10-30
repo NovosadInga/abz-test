@@ -1,0 +1,112 @@
+.input-bl
+	&__element
+		width: 100%
+		height: 54px
+		box-sizing: border-box
+		font-family: $font-family-main
+		border-radius: $border-radius-sm
+		border: 1px solid $color-grey
+		background: transparent
+		padding: 0 $spacing-xs
+		color: $color-black
+		outline: none
+		font-size: $font-size-md
+		&::placeholder
+			color: $color-extradark-grey
+		&:focus
+			&::placeholder
+				opacity: 0
+			&+.input-bl__label
+				opacity: 1
+	&__label
+		position: absolute
+		left: $spacing-xs
+		font-size: $font-size-sm
+		top: -9px
+		opacity: 0
+		padding: 0 4px
+		color: $color-extradark-grey
+		background: $color-light-grey
+		pointer-events: none
+	&__error,
+	&__help
+		position: absolute
+		top: 100%
+		left: $spacing-xs
+		font-size: $font-size-sm
+	&__help
+		color: $color-extradark-grey
+	&__error
+		color: $color-red
+.radio
+	text-align: left
+	&__title
+		margin-bottom: 11px
+	&-bl
+		display: block
+		position: relative
+		padding-left: 32px
+		margin-bottom: 7px
+		&::last-of-type
+			margin-bottom: 0
+		&__input
+			display: none
+			&:checked
+				&+.radio-bl__circle
+					border-color: $color-blue
+					transition: $time
+					&::before
+						opacity: 1
+						transition: $time
+		&__circle
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			border: 1px solid $color-grey
+			&::before
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				content: ""
+				width: 10px
+				height: 10px
+				border-radius: 50%
+				background: $color-blue
+				opacity: 0
+.file-bl
+	&__input
+		display: none
+	&-element
+		display: block
+		width: 100%
+		height: 54px
+		box-sizing: border-box
+		font-family: $font-family-main
+		border-radius: $border-radius-sm
+		border: 1px solid $color-grey
+		background: transparent
+		color: $color-black
+		outline: none
+		display: flex
+	&__label
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 83px
+		flex-shrink: 0
+		padding: 0 $spacing-xs
+		outline: 1px solid $color-black
+		border-radius: $border-radius-sm 0 0 $border-radius-sm
+		cursor: pointer
+		.loaded
+			display: none
+	&__text
+		display: flex
+		align-items: center
+		padding: 0 $spacing-xs
+		color: $color-extradark-grey

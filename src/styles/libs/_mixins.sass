@@ -1,0 +1,12 @@
+
+=r($width)
+	@media screen and (max-width: $width+ "px")
+		@content
+// more than X
+=rm($width)
+	@media screen and (min-width: $width+ "px")
+		@content
+// height, less than X
+=rh($height)
+	@media screen and (max-height: $height + "px")
+		@content

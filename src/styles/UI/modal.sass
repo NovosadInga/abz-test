@@ -1,0 +1,73 @@
+.modal
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(255,255,255,0.8)
+	opacity: 0
+	pointer-events: none
+	z-index: 100
+	transition: opacity $time $time
+	&-content
+		position: absolute
+		left :50%
+		top: 50%
+		transform: translate(-50%, -50%) scale(0)
+		background: $color-white
+		max-width: 700px
+		min-width: 300px
+		border: 1px solid $color-grey
+		border-radius: $border-radius-md
+		padding: $spacing-lg
+		transition: transform $time
+	&__close
+		position: absolute
+		right: 15px
+		top: 15px
+		width: 25px
+		height: 25px
+		cursor: pointer
+		&::before,
+		&::after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 100%
+			height: 2px
+			background: $color-grey
+			cursor: pointer
+		&::before
+			transform: translate(-50%, -50%) rotate(45deg)
+		&::after
+			transform: translate(-50%, -50%) rotate(-45deg)
+		&:hover
+			&::before,
+			&::after
+				background: $color-black
+	&.active
+		pointer-events: auto
+		opacity: 1
+		transition: opacity $time
+		.modal-content
+			transform: translate(-50%, -50%) scale(1)
+			transition: transform $time $time
+	&_error
+		.modal
+			&-content
+				border-color: $color-red
+			&__close:hover
+				&::before,
+				&::after
+					background: $color-red
+	&_success
+		.modal
+			&-content
+				border-color: $color-blue
+			&__close:hover
+				&::before,
+				&::after
+					background: $color-blue
+
+
