@@ -1,14 +1,14 @@
 .modal
 	position: fixed
-	top: 0
 	left: 0
-	width: 100%
-	height: 100%
+	right: 0
+	top: 0
+	bottom: 0
 	background: rgba(255,255,255,0.8)
 	opacity: 0
 	pointer-events: none
 	z-index: 100
-	transition: opacity $time $time
+	transition: opacity $time-sm $time-sm
 	&-content
 		position: absolute
 		left :50%
@@ -20,7 +20,7 @@
 		border: 1px solid $color-grey
 		border-radius: $border-radius-md
 		padding: $spacing-lg
-		transition: transform $time
+		transition: transform $time-sm
 	&__close
 		position: absolute
 		right: 15px
@@ -49,10 +49,10 @@
 	&.active
 		pointer-events: auto
 		opacity: 1
-		transition: opacity $time
+		transition: opacity $time-sm
 		.modal-content
 			transform: translate(-50%, -50%) scale(1)
-			transition: transform $time $time
+			transition: transform $time-sm $time-sm
 	&_error
 		.modal
 			&-content

@@ -16,10 +16,6 @@ import Loader from '../UI/Loader/Loader';
 import ContentModal from '../ContentModal/ContentModal';
 import { setErrorsServer, validate } from '../../helpers/validate';
 
-
-
-
-
 export interface IDataValue {
 	name: string,
 	email: string,
@@ -43,8 +39,8 @@ const Form: React.FC = () => {
 	useEffect(() => {
 		dispatch(fetchPositions())
 	}, []);
-	async function handleSubmit(
 
+	async function handleSubmit(
 		data: IDataValue,
 		actions: FormikHelpers<IDataValue>
 	) {
@@ -100,8 +96,6 @@ const Form: React.FC = () => {
 					isValid,
 					dirty,
 					isSubmitting,
-
-					/* and other goodies */
 				}) => (
 
 					<form

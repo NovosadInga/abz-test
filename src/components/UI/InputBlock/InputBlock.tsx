@@ -10,8 +10,6 @@ export interface IInputBlockProps {
 	touched: boolean | undefined
 	handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 	handleBlur: (e: React.FocusEvent<any, Element>) => void;
-	onFocus?: (val: string) => void;
-	setFieldValue?: (field: string, value: any, shouldValidate?: boolean | undefined) => void;
 }
 
 const InputBlock: React.FC<IInputBlockProps> = ({
@@ -24,9 +22,7 @@ const InputBlock: React.FC<IInputBlockProps> = ({
 	error,
 	touched,
 	handleChange,
-	handleBlur,
-	onFocus,
-	setFieldValue
+	handleBlur
 }) => {
 	return (
 		<div className={`form__item input-bl ${error && touched ? 'is_error' : ''}`}>
@@ -36,10 +32,6 @@ const InputBlock: React.FC<IInputBlockProps> = ({
 				id={id}
 				type={type}
 				name={name}
-				onFocus={() => {
-					const val = onFocus && onFocus(value)
-					setFieldValue && setFieldValue('phone', val)
-				}}
 				onChange={handleChange}
 				onBlur={handleBlur}
 				value={value}

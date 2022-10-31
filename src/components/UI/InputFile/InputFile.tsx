@@ -17,10 +17,10 @@ const InputFile: React.FC<IInputFileProps> = ({
 		if (isSubmitting) {
 			setPhotoName('')
 			setFileTouched(false)
-			setFieldValue('file', '');
 		}
 	}, [isSubmitting]);
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+
+	const handleChangeFile = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setFileTouched(true)
 		if (!e.target.files) return false;
 		setPhotoName(e.target.files[0].name ? e.target.files[0].name : "")
@@ -36,7 +36,7 @@ const InputFile: React.FC<IInputFileProps> = ({
 				id='file'
 				accept={accept}
 				onChange={(e) => {
-					handleChange(e)
+					handleChangeFile(e)
 				}}
 			/>
 			<div className='file-bl-element'>
